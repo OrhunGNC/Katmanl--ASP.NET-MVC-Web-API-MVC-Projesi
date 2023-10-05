@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="GymModelStoreContainer" CdmEntityContainer="GymEntities">
+    <EntitySetMapping Name="Customers">
+      <EntityTypeMapping TypeName="GymModel.Customer">
+        <MappingFragment StoreEntitySet="Customer">
+          <ScalarProperty Name="AnnualFee" ColumnName="AnnualFee" />
+          <ScalarProperty Name="MembershipEnding" ColumnName="MembershipEnding" />
+          <ScalarProperty Name="MembershipType" ColumnName="MembershipType" />
+          <ScalarProperty Name="CustomerPhone" ColumnName="CustomerPhone" />
+          <ScalarProperty Name="CustomerAddress" ColumnName="CustomerAddress" />
+          <ScalarProperty Name="CustomerName" ColumnName="CustomerName" />
+          <ScalarProperty Name="CustomerNo" ColumnName="CustomerNo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Equipments">
+      <EntityTypeMapping TypeName="GymModel.Equipment">
+        <MappingFragment StoreEntitySet="Equipments">
+          <ScalarProperty Name="EquipmentPrice" ColumnName="EquipmentPrice" />
+          <ScalarProperty Name="EquipmentCount" ColumnName="EquipmentCount" />
+          <ScalarProperty Name="EquipmentType" ColumnName="EquipmentType" />
+          <ScalarProperty Name="EquipmentName" ColumnName="EquipmentName" />
+          <ScalarProperty Name="EquipmentNo" ColumnName="EquipmentNo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Personels">
+      <EntityTypeMapping TypeName="GymModel.Personel">
+        <MappingFragment StoreEntitySet="Personels">
+          <ScalarProperty Name="PersonelType" ColumnName="PersonelType" />
+          <ScalarProperty Name="PersonelAddress" ColumnName="PersonelAddress" />
+          <ScalarProperty Name="PersonelPhone" ColumnName="PersonelPhone" />
+          <ScalarProperty Name="PersonelName" ColumnName="PersonelName" />
+          <ScalarProperty Name="PersonelNo" ColumnName="PersonelNo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Saloons">
+      <EntityTypeMapping TypeName="GymModel.Saloon">
+        <MappingFragment StoreEntitySet="Saloon">
+          <ScalarProperty Name="SaloonType" ColumnName="SaloonType" />
+          <ScalarProperty Name="CustomerCount" ColumnName="CustomerCount" />
+          <ScalarProperty Name="PersonelCount" ColumnName="PersonelCount" />
+          <ScalarProperty Name="SaloonPrice" ColumnName="SaloonPrice" />
+          <ScalarProperty Name="SaloonAddress" ColumnName="SaloonAddress" />
+          <ScalarProperty Name="SaloonNo" ColumnName="SaloonNo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

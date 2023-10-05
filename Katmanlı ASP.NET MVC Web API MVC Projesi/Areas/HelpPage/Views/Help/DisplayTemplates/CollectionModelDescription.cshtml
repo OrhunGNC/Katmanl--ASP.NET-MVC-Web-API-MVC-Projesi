@@ -1,0 +1,6 @@
+@using Katmanlı_ASP.NET_MVC_Web_API_MVC_Projesi.Areas.HelpPage.ModelDescriptions
+@model CollectionModelDescription
+@if (Model.ElementDescription is ComplexTypeModelDescription)
+{
+    @Html.DisplayFor(m => m.ElementDescription)
+}

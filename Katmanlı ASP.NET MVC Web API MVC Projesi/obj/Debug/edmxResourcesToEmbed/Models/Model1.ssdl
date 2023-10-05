@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="GymModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Customer">
+    <Key>
+      <PropertyRef Name="CustomerNo" />
+    </Key>
+    <Property Name="CustomerNo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CustomerName" Type="varchar" MaxLength="50" />
+    <Property Name="CustomerAddress" Type="varchar" MaxLength="50" />
+    <Property Name="CustomerPhone" Type="varchar" MaxLength="50" />
+    <Property Name="MembershipType" Type="varchar" MaxLength="50" />
+    <Property Name="MembershipEnding" Type="date" />
+    <Property Name="AnnualFee" Type="money" />
+  </EntityType>
+  <EntityType Name="Equipments">
+    <Key>
+      <PropertyRef Name="EquipmentNo" />
+    </Key>
+    <Property Name="EquipmentNo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="EquipmentName" Type="varchar" MaxLength="50" />
+    <Property Name="EquipmentType" Type="varchar" MaxLength="50" />
+    <Property Name="EquipmentCount" Type="char" MaxLength="10" />
+    <Property Name="EquipmentPrice" Type="money" />
+  </EntityType>
+  <EntityType Name="Personels">
+    <Key>
+      <PropertyRef Name="PersonelNo" />
+    </Key>
+    <Property Name="PersonelNo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PersonelName" Type="varchar" MaxLength="50" />
+    <Property Name="PersonelPhone" Type="varchar" MaxLength="50" />
+    <Property Name="PersonelAddress" Type="varchar" MaxLength="50" />
+    <Property Name="PersonelType" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Saloon">
+    <Key>
+      <PropertyRef Name="SaloonNo" />
+    </Key>
+    <Property Name="SaloonNo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SaloonAddress" Type="varchar" MaxLength="50" />
+    <Property Name="SaloonPrice" Type="money" />
+    <Property Name="PersonelCount" Type="char" MaxLength="10" />
+    <Property Name="CustomerCount" Type="char" MaxLength="10" />
+    <Property Name="SaloonType" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityContainer Name="GymModelStoreContainer">
+    <EntitySet Name="Customer" EntityType="Self.Customer" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Equipments" EntityType="Self.Equipments" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Personels" EntityType="Self.Personels" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Saloon" EntityType="Self.Saloon" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

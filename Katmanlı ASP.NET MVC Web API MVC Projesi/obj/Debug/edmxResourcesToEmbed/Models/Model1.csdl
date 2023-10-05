@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="GymModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="GymEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Customers" EntityType="GymModel.Customer" />
+    <EntitySet Name="Equipments" EntityType="GymModel.Equipment" />
+    <EntitySet Name="Personels" EntityType="GymModel.Personel" />
+    <EntitySet Name="Saloons" EntityType="GymModel.Saloon" />
+  </EntityContainer>
+  <EntityType Name="Customer">
+    <Key>
+      <PropertyRef Name="CustomerNo" />
+    </Key>
+    <Property Name="CustomerNo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CustomerName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CustomerAddress" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CustomerPhone" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="MembershipType" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="MembershipEnding" Type="DateTime" Precision="0" />
+    <Property Name="AnnualFee" Type="Decimal" Precision="19" Scale="4" />
+  </EntityType>
+  <EntityType Name="Equipment">
+    <Key>
+      <PropertyRef Name="EquipmentNo" />
+    </Key>
+    <Property Name="EquipmentNo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="EquipmentName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="EquipmentType" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="EquipmentCount" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="EquipmentPrice" Type="Decimal" Precision="19" Scale="4" />
+  </EntityType>
+  <EntityType Name="Personel">
+    <Key>
+      <PropertyRef Name="PersonelNo" />
+    </Key>
+    <Property Name="PersonelNo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PersonelName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PersonelPhone" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PersonelAddress" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PersonelType" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Saloon">
+    <Key>
+      <PropertyRef Name="SaloonNo" />
+    </Key>
+    <Property Name="SaloonNo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SaloonAddress" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="SaloonPrice" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="PersonelCount" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="CustomerCount" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="SaloonType" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+</Schema>

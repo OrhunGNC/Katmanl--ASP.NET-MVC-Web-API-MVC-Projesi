@@ -1,0 +1,63 @@
+﻿@model IEnumerable<mvcproject.Models.CustomerModel>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+
+
+<p>
+    @Html.ActionLink("Create New", "EY",null, new { @class = "btn btn-success" })
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.CustomerName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CustomerAddress)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CustomerPhone)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MembershipType)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MembershipEnding)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AnnualFee)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.CustomerName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CustomerAddress)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CustomerPhone)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MembershipType)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MembershipEnding)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AnnualFee)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "EY", new { id=item.CustomerNo }, new { @class = "btn btn-primary" }) |
+
+            @Html.ActionLink("Delete", "Delete", new { id = item.CustomerNo }, new { @class = "btn btn-secondary" })
+        </td>
+    </tr>
+}
+
+</table>

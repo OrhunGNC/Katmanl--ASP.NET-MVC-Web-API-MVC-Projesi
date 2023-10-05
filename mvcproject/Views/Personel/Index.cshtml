@@ -1,0 +1,50 @@
+﻿@model IEnumerable<mvcproject.Models.PersonelModel>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+
+
+<p>
+    @Html.ActionLink("Create New", "EY", null, new {@class="btn btn-success"})
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.PersonelName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PersonelPhone)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PersonelAddress)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PersonelType)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.PersonelName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PersonelPhone)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PersonelAddress)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PersonelType)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "EY", new { id=item.PersonelNo }, new {@class="btn btn-primary"}) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.PersonelNo }, new {@class="btn btn-secondary"})
+        </td>
+    </tr>
+}
+
+</table>

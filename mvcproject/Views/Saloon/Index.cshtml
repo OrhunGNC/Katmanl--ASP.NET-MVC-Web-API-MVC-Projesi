@@ -1,0 +1,56 @@
+﻿@model IEnumerable<mvcproject.Models.SaloonModel>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+
+
+<p>
+    @Html.ActionLink("Create New", "EY", null, new {@class="btn btn-success"})
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.SaloonAddress)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SaloonPrice)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PersonelCount)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CustomerCount)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SaloonType)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.SaloonAddress)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SaloonPrice)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PersonelCount)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CustomerCount)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SaloonType)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "EY", new { id = item.SaloonNo }, new {@class="btn btn-primary"}) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.SaloonNo }, new {@class="btn btn-secondary"})
+        </td>
+    </tr>
+}
+
+</table>
